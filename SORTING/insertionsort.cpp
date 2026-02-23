@@ -3,8 +3,8 @@
 using namespace std;
 
 /*
-1. i will first take the first element let's call it key, alone it is sorted; the rest of the array is unsorted so i
-will take the first element of the unsorted array i.e. the 2nd element of the whole array.
+1. the first element on its own is sorted ; the rest of the array is unsorted so i
+will take the first element of the unsorted array i.e. the 2nd element of the whole array as the key.
 2. i will take that element and compare it with the previous element
 3. if the prev element is greater, i will place the value of the greater element at the index of the prev +1;
 e.g. 1352 key = 2, then it will look like this : 1355(prev here is the 2 index)
