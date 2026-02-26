@@ -1,61 +1,50 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
 using namespace std;
 
-class Solution {
-public:
-    // Function to merge two halves of the array
-    void merge(vector<int>& arr, int low, int mid, int high) {
-        // Create temp arrays
-        vector<int> temp;
-        int left = low, right = mid + 1;
+void mergeSort(vector<int> &arr,int st, int end);
+void merge(vector<int> &arr, int st, int mid, int end);
 
-        // Merge two sorted halves
-        while (left <= mid && right <= high) {
-            if (arr[left] <= arr[right])
-                temp.push_back(arr[left++]);
-            else
-                temp.push_back(arr[right++]);
-        }
-
-        // Copy remaining elements from left half
-        while (left <= mid)
-            temp.push_back(arr[left++]);
-
-        // Copy remaining elements from right half
-        while (right <= high)
-            temp.push_back(arr[right++]);
-
-        // Copy sorted elements back to original array
-        for (int i = low; i <= high; i++)
-            arr[i] = temp[i - low];
+int main(){
+    vector<int> arr {2,4,6,7,8,5,1,9,11,12,10,3};
+    mergeSort(arr, 0, arr.size()- 1);
+    for(auto i: arr){
+        cout << i << " " ;
     }
-
-    // Recursive merge sort function
-    void mergeSort(vector<int>& arr, int low, int high) {
-        if (low >= high){
-            return;
-        }
-
-        // Find the middle index
-        int mid = (low + high) / 2;
-
-        // Recursively sort left half
-        mergeSort(arr, low, mid);
-
-        // Recursively sort right half
-        mergeSort(arr, mid + 1, high);
-
-        // Merge the two sorted halves
-        merge(arr, low, mid, high);
-    }
-};
-
-int main() {
-    vector<int> arr = {5, 2, 8, 4, 1};
-    Solution sol;
-    sol.mergeSort(arr, 0, arr.size() - 1);
-    for (int x : arr)
-         cout << x << " ";
-    cout << endl;
     return 0;
+}
+void mergeSort(vector<int> &arr,int st, int end){
+
+    if(st < end){
+        int mid = st + (end - st)/2;
+        mergeSort(arr,  st,  mid);
+        mergeSort(arr, mid +1, end);
+        merge(arr, st,mid,end);
+    }
+}
+void merge(vector<int> &arr, int st, int mid, int end){
+    int i {st};
+    int j {mid +1};
+    vector<int> temp;
+    while(i <= mid&&j<= end){
+        if(arr[i] <= arr[j]){
+            temp.push_back(arr[i]);
+            i++;
+        }
+        else{
+            temp.push_back(arr[j]);
+            j++;
+        }
+    }
+    while(i<=mid){
+        temp.push_back(arr[i]);
+        i++;
+    }
+    while(j<=end){
+        temp.push_back(arr[j]);
+        j++;
+    }
+    for(int idx {}; idx < temp.size();idx++){
+        arr[idx + st] = temp[idx];//because the start of the temp is from the st which can be any index.
+    }
 }
