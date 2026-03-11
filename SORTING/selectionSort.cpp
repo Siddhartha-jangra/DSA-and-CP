@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-using namespacd std;
+using namespace std;
 
 /*what ill do is fisrt i will find the minimum element in the array and swap it
  with the first element then i will find the minimum element in the remaining array

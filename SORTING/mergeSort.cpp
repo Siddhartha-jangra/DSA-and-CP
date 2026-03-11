@@ -8,7 +8,7 @@ void merge(vector<int> &arr, int st, int mid, int end);
 int main(){
     vector<int> arr {2,4,6,7,8,5,1,9,11,12,10,3};
     mergeSort(arr, 0, arr.size()- 1);
-    for(auto i: arr){
+    for(auto i: arr){       
         cout << i << " " ;
     }
     return 0;
