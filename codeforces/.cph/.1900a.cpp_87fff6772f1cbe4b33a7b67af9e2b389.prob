@@ -1,0 +1,1 @@
+{"name":"Local: 1900a","url":"b:\\dsa\\codeforces\\1900a.cpp","tests":[{"id":1773464168718,"input":"5\n3\n...\n7\n##....#\n7\n..#.#..\n4\n####\n10\n#...#..#.#\n","output":"2\n2\n5\n0\n2\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"b:\\dsa\\codeforces\\1900a.cpp","group":"local","local":true}
