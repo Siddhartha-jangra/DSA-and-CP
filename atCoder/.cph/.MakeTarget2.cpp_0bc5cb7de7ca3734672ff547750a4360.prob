@@ -1,0 +1,1 @@
+{"name":"Local: MakeTarget2","url":"b:\\dsa\\atCoder\\MakeTarget2.cpp","tests":[{"id":1773494497704,"input":"-4 3 1 3\n","output":"10\n"},{"id":1773494550336,"input":"-14 14 -14 14\n","output":"449"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"b:\\dsa\\atCoder\\MakeTarget2.cpp","group":"local","local":true}

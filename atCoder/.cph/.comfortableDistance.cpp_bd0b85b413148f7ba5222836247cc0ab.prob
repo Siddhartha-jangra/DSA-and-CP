@@ -1,0 +1,1 @@
+{"name":"Local: comfortableDistance","url":"b:\\dsa\\atCoder\\comfortableDistance.cpp","tests":[{"id":1773493232205,"input":"6 2 4\naabcba\n","output":"2\n"},{"id":1773493562414,"input":"10 2 6\naabbccaabb\n","output":"6\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"b:\\dsa\\atCoder\\comfortableDistance.cpp","group":"local","local":true}
