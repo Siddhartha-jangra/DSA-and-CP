@@ -4,15 +4,16 @@ using namespace std;
 void solve() {
     int n;
     cin>> n;
-    int k = n -1;
     vector <int> ans;
-    int count {1};
-    for(int i{};i<n + 1;i++){
-        ans.push_back(n*count+k);
-        ans.push_back(n*count + k-1);
-        ans.push_back(count);
-        count++;
-        k--;
+    int k = 1;
+    int m = 0;
+    for(int i{};i<n ;i++){
+
+        ans.push_back(3*n-m);
+        ans.push_back(n*3-m-1);
+        ans.push_back(k);
+        m += 2;
+        k++;
     }
     for(int i : ans){
         cout << i << " "; 

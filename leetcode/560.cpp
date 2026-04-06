@@ -3,18 +3,30 @@
 using namespace std;
 
 int answer(vector<int>&nums,int k){
-    int ans{};
-    int sum = {};
-    int i{};j{};
-    while(i<nums.size()&&j<nums.size()){
-        if(sum == k){
-            ans++;
-            j++;
-        }
-        if()
+     unordered_map<int, int> prefixSums;
+  
+    int res = 0;
+    int currSum = 0;
 
+    for (int i = 0; i < arr.size(); i++) {
+        
+        // Add current element to sum so far.
+        currSum += arr[i];
+
+        // If currSum is equal to desired sum, then a new
+        // subarray is found. So increase count of subarrays.
+        if (currSum == k)
+            res++;
+
+        // Check if the difference exists in the prefixSums map.
+        if (prefixSums.find(currSum - k) != prefixSums.end())
+            res += prefixSums[currSum - k];
+
+        // Add currSum to the set of prefix sums.
+        prefixSums[currSum]++;
     }
-    return ans;
+
+    return res;
 }
 
 int main(){
