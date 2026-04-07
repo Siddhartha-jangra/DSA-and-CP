@@ -1,5 +1,10 @@
-#include <iostream>
-
+#include <bits/stdc++.h>
+using namespace std;
 int main(){
-    std::cout << 1%5 << " " << 4%1;
+    vector<pair<int, int>> v = {{1,2},{5,5},{3,8}};
+    sort(v.begin(),v.end());
+    for(auto i: v){
+        cout<< i.first << " " << i.second  << '\n'; 
+    }   
+
 }
