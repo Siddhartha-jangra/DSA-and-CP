@@ -5,14 +5,8 @@ typedef long long ll;
 #define pb push_back
 
 void solve() {
-    int n; cin >> n;
-    vector<string> s[n];
-    for(int i {};i< n;i++){
-        for(int j{};j<n;j++){
-            string a; cin >> a; s[i][j] = a;
-        }
-    }
-
+    int n;cin >>  n;
+    
 }
 
 int main() {

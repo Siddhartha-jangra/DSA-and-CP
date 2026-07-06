@@ -6,23 +6,28 @@ void solve() {
     vector<vector<int>> v(n);
     for(int i{};i<n;i++){
         int a;cin >> a;
+        v[i].resize(a);
         for(int j{};j<a;j++){
             int g;cin>> g;
             v[i][j] = g;
         }
         sort(v[i].begin(),v[i].end());
     }
-    int minEle{INT_MAX};
-    int maxEle{INT_MIN};
+    int min_0th_element{INT_MAX};
+    int min_1th_element{INT_MAX};
     for(int i{};i<n;i++){
-        maxEle = max(maxEle,v[i][1]);
-        minEle = min(minEle,v[i][1]);
-        
+        min_0th_element = min(min_0th_element,v[i][0]);
+        min_1th_element = min(min_1th_element,v[i][1]);
+    }
+    long long sum{};
+    for(int i{};i<n;i++){
+        sum += v[i][1];
     }
 
-    for(int i{};i<n;i++){
-        sort()
-    }
+    sum = sum + min_0th_element - min_1th_element;
+
+    cout << sum << '\n';
+
 }
 
 int main() {

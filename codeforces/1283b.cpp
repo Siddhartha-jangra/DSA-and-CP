@@ -5,13 +5,18 @@ typedef long long ll;
 #define pb push_back
 
 void solve() {
-    int n; cin >> n;
-    vector<string> s[n];
-    for(int i {};i< n;i++){
-        for(int j{};j<n;j++){
-            string a; cin >> a; s[i][j] = a;
-        }
+    ll n ,k ; cin >> n >> k;
+    ll ans{};
+    ll remaining_candies{n%k};
+    ans = (n/k);
+    ans *= k;
+    if(remaining_candies > k/2){
+        ans += k/2;
+    }else{
+        ans += remaining_candies;
     }
+
+    cout << ans << endl;
 
 }
 

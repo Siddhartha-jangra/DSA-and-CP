@@ -35,7 +35,7 @@ int main()
     cin >> t;
     while (t--)
     {
-        long long n, m; // Lengths of strings x and s
+        long long n, m; // Lengths of strings x and sj
         cin >> n >> m;
         string x; // String x
         cin >> x;

@@ -5,14 +5,9 @@ typedef long long ll;
 #define pb push_back
 
 void solve() {
-    int n; cin >> n;
-    vector<string> s[n];
-    for(int i {};i< n;i++){
-        for(int j{};j<n;j++){
-            string a; cin >> a; s[i][j] = a;
-        }
-    }
-
+    pair<ll, ll> h,k,q;
+    cin >> h.first>> h.second>>k.first>>k.second>>q.first>>q.second;
+    
 }
 
 int main() {
@@ -25,5 +20,5 @@ int main() {
     while (t--) {
         solve();
     }
-    return 0;
-}
+    return 0;  
+}-
