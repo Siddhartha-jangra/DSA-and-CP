@@ -1,0 +1,16 @@
+{
+  "sourceFile": "2241b.cpp",
+  "updatedAt": 1783311008148,
+  "cases": [
+    {
+      "id": "custom-1",
+      "label": "Custom 1",
+      "kind": "custom",
+      "order": 0,
+      "inputFile": "custom-1.in",
+      "expectedFile": "custom-1.out",
+      "createdAt": 1783310811008,
+      "updatedAt": 1783311008147
+    }
+  ]
+}
