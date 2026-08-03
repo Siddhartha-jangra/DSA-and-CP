@@ -1,0 +1,16 @@
+{
+  "sourceFile": "1389A.cpp",
+  "updatedAt": 1785767168751,
+  "cases": [
+    {
+      "id": "custom-1",
+      "label": "Custom 1",
+      "kind": "custom",
+      "order": 0,
+      "inputFile": "custom-1.in",
+      "expectedFile": "custom-1.out",
+      "createdAt": 1785767144482,
+      "updatedAt": 1785767168750
+    }
+  ]
+}
