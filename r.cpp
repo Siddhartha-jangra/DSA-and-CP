@@ -1,41 +1,42 @@
 #include <bits/stdc++.h>
-using namespace std; 
+using namespace std;
 
-void solve() {
-    int n;
-    cin>> n;
-    vector<int> nums(n);
-    int sum{};
-    int prod{1};
-    int count {};
-    for(int i{};i<n;i++){
-        int a;
-        cin >> a;
-        nums[i] = a;
-        sum += a;
-        prod *= a;
-    }
-    int i {};
-    int ans{};
-    while(sum < 0||prod == -1 &&i <n){
-        if(nums[i]==-1){
-            nums[i] = 1;
-            sum += 2;
-            prod *= -1;
-            ans++;
+typedef long long ll;
+#define pb push_back
+
+
+    bool hasGroupsSizeX(vector<int>& deck) {
+        sort(deck.begin(),deck.end());
+        vector<int> count;
+        int cc{};
+        int ce{deck[0]};
+        for(int i{};i<deck.size();i++){
+            if(ce == deck[i]){
+                cc++;
+            }else{
+                count.push_back(cc);
+                cc = 1;
+                ce = deck[i];
+            }
+            if(i == deck.size()-1){
+                count.push_back(cc);
+            }
         }
-        i++;
+        int gcd = __gcd(0,count[0]);
+        for(int i{};i<count.size();i++){
+            gcd = __gcd(gcd,count[i]);
+        }
+        return gcd>1?true:false;
     }
-    cout << ans <<'\n';
-}
+
 
 int main() {
+    // Fast I/O
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-    int t;
-    cin >> t;
-    while(t--) {
-        solve();
-    }
+
+    
+ vector<int> deck = {1,1,2,2,2,2};
+    cout << hasGroupsSizeX(deck);
     return 0;
 }
