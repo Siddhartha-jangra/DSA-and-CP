@@ -1,0 +1,26 @@
+{
+  "sourceFile": "1996B.cpp",
+  "updatedAt": 1786037989318,
+  "cases": [
+    {
+      "id": "custom-1",
+      "label": "Custom 1",
+      "kind": "custom",
+      "order": 0,
+      "inputFile": "custom-1.in",
+      "expectedFile": "custom-1.out",
+      "createdAt": 1786037931030,
+      "updatedAt": 1786037931030
+    },
+    {
+      "id": "custom-2",
+      "label": "TC 2",
+      "kind": "custom",
+      "order": 1,
+      "inputFile": "custom-2.in",
+      "expectedFile": "custom-2.out",
+      "createdAt": 1786037989318,
+      "updatedAt": 1786037989318
+    }
+  ]
+}

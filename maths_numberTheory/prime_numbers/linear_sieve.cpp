@@ -38,7 +38,7 @@ ALGORITHM LOGIC:
 int main(){
     int n; cin >> n;
     vector<int> nums;
-    vector<int> lp(n+1);
+    vector<int> lp(n+1);kokok
     for(int i {2};i<n;++i){
         if(lp[i] == 0){
             lp[i] = i;

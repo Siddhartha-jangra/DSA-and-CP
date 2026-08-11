@@ -2,3 +2,6 @@
 [ERROR] Failed to kill process or delete locked file: Error: EPERM: operation not permitted, unlink 'C:\Users\jangr.000\AppData\Local\Temp\cp-visualizer\build\2241.exe'
 [ERROR] Failed to kill process or delete locked file: Error: EPERM: operation not permitted, unlink 'C:\Users\jangr.000\AppData\Local\Temp\cp-visualizer\build\2241c.exe'
 [ERROR] Failed to kill process or delete locked file: Error: EPERM: operation not permitted, unlink 'C:\Users\jangr.000\AppData\Local\Temp\cp-visualizer\build\2241c.exe'
+[ERROR] Invalid string length
+[ERROR] Invalid string length
+[ERROR] Invalid string length
