@@ -27,7 +27,7 @@ void solve() {
         cout << "YES\n";
     }else{
         cout << "NO\n";
-    }
+    }gg
 }
 
 int main() {
