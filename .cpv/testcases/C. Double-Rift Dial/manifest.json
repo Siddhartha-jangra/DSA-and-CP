@@ -1,0 +1,16 @@
+{
+  "sourceFile": "C. Double-Rift Dial.cpp",
+  "updatedAt": 1786722662295,
+  "cases": [
+    {
+      "id": "custom-1",
+      "label": "Test 1",
+      "kind": "custom",
+      "order": 0,
+      "inputFile": "custom-1.in",
+      "expectedFile": "custom-1.out",
+      "createdAt": 1786722662295,
+      "updatedAt": 1786722662295
+    }
+  ]
+}

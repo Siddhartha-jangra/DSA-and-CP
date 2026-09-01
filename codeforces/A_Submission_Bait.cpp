@@ -8,8 +8,24 @@ typedef vector<long long> vl;
 #define all(x) (x).begin(), (x).end()
 
 void solve() {
+    int n; 
+    cin >> n;
+    map<int, int> freq;
+    for (int i = 0; i < n; ++i) {
+        int x; 
+        cin >> x;
+        freq[x]++;
+    }
     
+    for (auto const& [val, count] : freq) {
+        if (count % 2 != 0) {
+            cout << "YES\n";
+            return;
+        }
+    }
+    cout << "NO\n";
 }
+
 
 int main() {
     // Fast I/O

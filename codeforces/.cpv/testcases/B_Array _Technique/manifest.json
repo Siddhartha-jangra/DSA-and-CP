@@ -1,0 +1,16 @@
+{
+  "sourceFile": "B_Array _Technique.cpp",
+  "updatedAt": 1787112896285,
+  "cases": [
+    {
+      "id": "custom-1",
+      "label": "Custom 1",
+      "kind": "custom",
+      "order": 0,
+      "inputFile": "custom-1.in",
+      "expectedFile": "custom-1.out",
+      "createdAt": 1787112896285,
+      "updatedAt": 1787112896285
+    }
+  ]
+}
