@@ -25,7 +25,7 @@ for(int i = 0; i < n; i++){
 
     // }
 
-    //this is the more optimal solution by using sorting
+    //  this is the more optimal solution by using sorting
     // sort(nums.begin(), nums.end());//this will sort the entire array
     // int freq{0};
     // for(int i{}; i < n; i++){

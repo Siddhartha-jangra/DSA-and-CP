@@ -1,25 +1,55 @@
+
 #include <bits/stdc++.h>
 using namespace std;
 
-typedef long long ll;
-#define pb push_back
-typedef vector<int> vi;
-typedef vector<long long> vl;
-#define all(x) (x).begin(), (x).end()
+class Solution
+{
+public:
+    int longestSubarray(vector<int> &nums, int k)
+    {
+        int n = nums.size(); 
 
-void solve() {
-    
-}
+        map<int, int> preSumMap;
+        int sum = 0;
+        int maxLen = 0;
+        for (int i = 0; i < n; i++) {
+            // calculate the prefix sum till index i
+            sum += nums[i];
 
-int main() {
-    // Fast I/O
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
+            // if the sum equals k, update maxLen
+            if (sum == k) {
+                maxLen = max(maxLen, i + 1);
+            }
 
-    int t = 1;
-    cin >> t; // Remove or comment out if the problem only has one test case
-    while (t--) {
-        solve();
+            // calculate the sum of remaining part i.e., sum - k
+            int rem = sum - k;
+
+            // calculate the length and update maxLen
+            if (preSumMap.find(rem) != preSumMap.end()) {
+                int len = i - preSumMap[rem];
+                maxLen = max(maxLen, len);
+            }
+
+            // update the map if sum is not already present
+            if (preSumMap.find(sum) == preSumMap.end()) {
+                preSumMap[sum] = i;
+            }
+        }
+
+        return maxLen;
     }
+};
+
+int main()
+{
+    vector<int> a = { 10,-2,8,-7, 6,5,4 };
+    int k = 10;
+
+    // Create an instance of the Solution class
+    Solution solution;
+    // Function call to get the result
+    int len = solution.longestSubarray(a, k);
+   
+    cout << "The length of the longest subarray is: " << len << "\n";
     return 0;
 }
