@@ -1,29 +1,45 @@
-#include <bits/stdc++.h>
+#include <vector>
 using namespace std;
 
-typedef long long ll;
-#define pb push_back
-
-void solve() {
-    int n; cin >> n;
-    vector<string> s[n];
-    for(int i {};i< n;i++){
-        for(int j{};j<n;j++){
-            string a; cin >> a; s[i][j] = a;
+void unionarray(vector<int> &nums1,vector<int> &nums2, int m, int n){
+    int i{};
+    int j{};
+    vector<int> temp;
+    while(i< m &&j < n){
+        if(nums1[i] == nums2[j]){
+            temp.push_back(nums1[i]);
+            i++;
+            temp.push_back(nums2[j]);
+            j++;
+        }
+        else if(nums1[i]< nums2[j]){
+            temp.push_back(nums1[i]);
+            i++;
+        }
+        else{
+            temp.push_back(nums2[j]);
+            j++;
         }
     }
-
+    while(i < m){
+        temp.push_back(nums1[i]);
+        i++;
+    }
+    while(j< n){
+        temp.push_back(nums2[j]);
+        j++;
+    }
+    for(int idx {}; idx < m+n;idx++){
+        nums1[idx] = temp[idx];
+    }
 }
 
-int main() {
-    // Fast I/O
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-
-    int t = 1;
-    cin >> t; // Remove or comment out if the problem only has one test case
-    while (t--) {
-        solve();
+int main(){
+    vector<int> nums1 {1,2,3,0,0,0};
+    vector<int> nums2 {2,5,6};
+    unionarray(nums1, nums2, 3,3);
+    for(int i : nums1){
+        cout << i << " ";
     }
-    return 0;
+        return 0;
 }
