@@ -44,7 +44,7 @@ void insert(node*& head,int data,int pos){
        current= current -> next;
     }
     current -> next = nn -> next;
-    nn -> next = current
+    nn -> next = current;
 
 }
 int main(){

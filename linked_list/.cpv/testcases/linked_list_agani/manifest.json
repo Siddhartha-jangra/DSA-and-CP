@@ -1,0 +1,16 @@
+{
+  "sourceFile": "linked_list_agani.cpp",
+  "updatedAt": 1792172710839,
+  "cases": [
+    {
+      "id": "custom-1",
+      "label": "Custom 1",
+      "kind": "custom",
+      "order": 0,
+      "inputFile": "custom-1.in",
+      "expectedFile": "custom-1.out",
+      "createdAt": 1792172667750,
+      "updatedAt": 1792172710839
+    }
+  ]
+}
